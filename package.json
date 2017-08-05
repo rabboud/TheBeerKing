@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/.bin/webpack-dev-server --progress",
+	"copy": "cp ./app/index.html ./public && cp -r ./app/assets ./public/",
+    "dev": "npm run copy; ./node_modules/.bin/webpack-dev-server --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

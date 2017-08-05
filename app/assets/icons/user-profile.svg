@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>7FF7C1DA-7D63-42C5-909C-A9A532EF9E39</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <ellipse id="path-1" cx="15" cy="15" rx="15" ry="15"></ellipse>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-496.000000, -1298.000000)">
+            <g id="user-copy-6" transform="translate(497.000000, 1299.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" stroke="#D7D7D7" fill="#D7D7D7" xlink:href="#path-1"></use>
+                <path d="M15.25,35.25 C10.1413661,35.25 6,31.1086339 6,26 C6,20.8913661 10.1413661,16.75 15.25,16.75 C20.3586339,16.75 24.5,20.8913661 24.5,26 C24.5,31.1086339 20.3586339,35.25 15.25,35.25 Z M15.25,16.75 C12.695683,16.75 10.625,14.679317 10.625,12.125 C10.625,9.57068303 12.695683,7.5 15.25,7.5 C17.804317,7.5 19.875,9.57068303 19.875,12.125 C19.875,14.679317 17.804317,16.75 15.25,16.75 Z" id="Combined-Shape" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
