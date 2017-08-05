@@ -5,22 +5,9 @@ import {OmzHistory} from 'app/services';
 import {IntlProvider, addLocaleData} from 'react-intl';
 import pt from 'react-intl/locale-data/pt';
 import {Header, LeftMenu, Crop, OfflineModal, OfficeHoursModal, NoMobile, OMZHelmet, Loader} from 'app/screens/Components';
-import {viewsActions,
-    officeHoursActions,
-    tagActions,
-    interactionActions,
-    accountActions,
+import {
     facebookActions,
-    userActions,
-    filterActions,
-    widgetActions,
-    profileActions,
-    telegramActions,
-    departmentActions,
-    channelActions,
-    visitorTrackerActions,
-    webhookActions,
-    emailActions
+    departmentActions
 } from 'app/flux/Actions';
 
 class AppControl extends React.Component {
@@ -121,62 +108,14 @@ class AppControl extends React.Component {
         const accountId = this.props.currentUserStore.information.account.id || id;
 
         switch (path) {
-            case '/tags':
-                filterActions.fetchAgentsFilter({accountId: accountId});
-                tagActions.resetAll();
-                tagActions.fetchAll({accountId: accountId});
-                break;
-            case '/users':
-                filterActions.fetchAgentsFilter({accountId: accountId});
-                filterActions.fetchDepartmentsFilter({accountId: accountId});
-                profileActions.fetchAll({accountId: accountId, selectable: true});
-                userActions.fetchAll({accountId: accountId});
-                break;
             case '/departments':
                 filterActions.fetchAgentsFilter({accountId: accountId});
                 channelActions.fetchAll({accountId: accountId, selectable: true});
                 departmentActions.fetchAll({accountId: accountId});
                 break;
-            case '/officeHour':
-                officeHoursActions.fetchTimezones();
-                officeHoursActions.fetchAll({accountId: accountId});
-                break;
             case '/facebook':
                 facebookActions.fetchAll({accountId: accountId});
                 departmentActions.fetchAll({accountId: accountId, state: 'ACTIVE'});
-                break;
-            case '/account':
-                accountActions.fetchInfo(accountId);
-                break;
-            case '/telegram':
-                telegramActions.fetchAll({accountId: this.props.currentUserStore.information.account.id});
-                departmentActions.fetchAll({accountId: this.props.currentUserStore.information.account.id, state: 'ACTIVE'});
-                break;
-            case '/integrations':
-                webhookActions.fetchAll({accountId: this.props.currentUserStore.information.account.id});
-                filterActions.fetchDepartmentsFilter({accountId: accountId});
-                break;
-            case '/inbox':
-                filterActions.fetchDepartmentsFilter({accountId: accountId});
-                interactionActions.alertInbox(false);
-                break;
-            case '/widget':
-                widgetActions.fetchAppearance({accountId: accountId});
-                break;
-            case '/dashboard':
-                interactionActions.fetchLastWeek({accountId: accountId});
-                interactionActions.fetchTalking({accountId: accountId});
-                interactionActions.fetchPending({accountId: accountId});
-                interactionActions.fetchAnswered({accountId: accountId});
-                interactionActions.fetchNotAnswered({accountId: accountId});
-                visitorTrackerActions.fetchTotalCount({accountId: accountId});
-                accountActions.fetchScore({accountId: accountId});
-                userActions.fetchOnline({accountId: accountId});
-                tagActions.fetchUseCount({accountId: accountId});
-                break;
-            case '/email':
-                emailActions.fetchAll({accountId: accountId});
-                departmentActions.fetchAll({accountId: this.props.currentUserStore.information.account.id, state: 'ACTIVE'});
                 break;
             default:
                 break;
