@@ -1,7 +1,0 @@
-.DS_Store
-node_modules/
-public/*
-_env.js
-app/services/env.js
-app/screens/Components
-npm-debug.log
