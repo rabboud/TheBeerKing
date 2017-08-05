@@ -1,0 +1,118 @@
+.message_bubble
+    margin: 0 10px
+    text-align: left
+    display: inline-block
+    padding: 7px 15px
+    max-width: calc(100% - 80px)
+    border-radius: 20px
+    background-color: $gray-tertiary
+
+    &__content
+        width: 95%
+        color: $gray-quaternary
+        font-size: 14px
+        box-decoration-break: clone
+        white-space: pre-wrap
+        cursor: text
+
+        &__status
+            display: inline-block
+            width: 15px
+            vertical-align: bottom
+
+            &--ERROR
+                text-align: center
+
+            &__message
+                padding: 0 6px
+                border-radius: 50%
+                color: $white
+                background-color: $red-primary
+                font-weight: bold
+
+        & a
+            color: $blue-primary
+
+        & img, auido, video
+            max-height: 200px
+            border-radius: 5px
+
+    &__time
+        font-size: 11px
+        font-style: italic
+        padding-right: 3px
+        padding-left: 10px
+        color: $gray-quinquennary
+        vertical-align: bottom
+        display: inline-block
+
+    &--CLIENT
+        background-color: $gray-secondary
+        .message_bubble
+            &__time
+                color: $white
+
+            &__content
+                color: $white
+
+                a
+                    color: #CDE3FC
+
+                &__typing
+                    display: inline-block
+
+                    @function delay($interval, $count, $index)
+                        @return ($index * $interval) - ($interval * $count)
+
+                    @keyframes ball-pulse-sync
+                        33%
+                            transform: translateY(5px)
+                        66%
+                            transform: translateY(-5px)
+                        100%
+                            transform: translateY(0)
+
+                    @mixin ball-pulse-sync($n: 3, $start: 1)
+                        @for $i from $start through $n
+                            > div:nth-child(#{$i})
+                                animation: ball-pulse-sync 1s delay(0.9s, $n, $i) infinite ease-in-out
+
+                    &__container
+                        @include ball-pulse-sync()
+
+                        > div
+                            background-color: $gray-tertiary
+                            width: 5px
+                            height: 5px
+                            border-radius: 50%
+                            margin: 0 1px
+                            display: inline-block
+
+    &--AUDIO
+        background-color: $blue-primary
+        @extend .rythm--center
+
+        .message_bubble
+            &__content,
+            &__time
+                color: $white
+
+    &--INFO
+        background-color: $blue-primary
+        text-align: center
+
+        .message_bubble
+            &__content,
+            &__time
+                color: $white
+
+    &[data-round="big"]
+        border-radius: 20px
+
+    &[data-round="small"]
+        border-radius: 5px
+
+    &--media
+        border-radius: 5px
+        padding: 15px
+        text-align: right

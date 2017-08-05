@@ -1,0 +1,150 @@
+$circleBorderRadius: 50%
+$defaultBorderRadius: 5px
+$roundedBorderRadius: 3px
+
+.table
+    @extend .large-12
+    background-color: $white
+    border-spacing: 0
+    text-align: left
+    padding: 0 10px 0 20px
+
+    &__sort
+        display: inline-block
+        margin-left: 10px
+        cursor: pointer
+
+        & >*
+            &:first-child
+                margin-bottom: 2px
+
+    &__panel
+        @extend .rythm--6
+        background-color: #f1f1f1
+
+        button
+            margin-right: 15px
+
+    &__body
+        @extend .rythm--margin-t-1
+        border: none
+        border-spacing: 0
+
+    &__title
+        padding: 14px
+        font-family: Roboto !important
+        font-size: 13px
+        font-weight: normal
+        color: $gray-secondary
+
+        & > .fa
+            margin-left: 10px
+
+        &--uppercase
+            text-transform: uppercase
+
+        &--actions
+            width: 150px
+
+            .table__action__list__item
+                margin-left: 10px
+
+                &:first-child
+                    margin-left: 0
+
+    &__row
+        border-top: solid thin $black
+        border-spacing: 0
+        border-radius: $main-border-radius
+
+        td
+            font-family: Roboto
+            font-size: 16px
+            color: $gray-primary
+
+            &:first-of-type
+                border-top-left-radius: $main-border-radius
+                border-bottom-left-radius: $main-border-radius
+
+            &:last-of-type
+                border-top-right-radius: $main-border-radius
+                border-bottom-right-radius: $main-border-radius
+
+        &:nth-child(odd)
+            background-color: $gray-tertiary
+
+        &--title
+            .table__item
+                @extend .large-3, .columns, .rythm--padding-t-1, .rythm--padding-b-1
+                font-weight: bolder
+                text-align: left
+                border-top: none
+                font-family: 'Roboto'
+        td
+            padding: 15px
+
+        &:hover, &[data-selected="true"]
+            background-color: $gray-senary
+
+        &[data-clickable="true"]
+            cursor: pointer
+
+    &__column
+        @extend .text--wrap
+        max-width: 200px
+
+
+    &__loader-wrapper
+        @extend .centralize, .rythm--margin-t-1, .rythm--margin-b-1
+        display: block
+
+    &__action
+        &__list
+            list-style: none
+            border: none
+            display: inline-block
+
+            &__item
+                display: inline-block
+                padding: 2px
+                background: $gray-secondary
+
+                &--default
+                    &:first-child
+                        border-top-left-radius: $defaultBorderRadius
+                        border-bottom-left-radius: $defaultBorderRadius
+
+                    &:last-child
+                        border-top-right-radius: $defaultBorderRadius
+                        border-bottom-right-radius: $defaultBorderRadius
+
+                    &:hover
+                        background: #ccc
+
+                &--circle
+                    border-radius: $circleBorderRadius
+
+                    button, a
+                        height: 36px
+                        width: 36px
+
+                &--rounded
+                    border-radius: $roundedBorderRadius
+
+                    button, a
+                        height: 22px
+                        width: 22px
+
+                &--enabled
+                    background-color: $lima
+
+                &--disabled
+                    background-color: $gray-senary
+                    border: 1px solid $gray-tertiary
+
+                button, a
+                    border: none
+                    background: none
+                    color: $white
+                    cursor: pointer
+                    text-align: center

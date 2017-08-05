@@ -1,0 +1,27 @@
+.MessageList
+    display: block
+    height: 100%
+    background-color: $white
+
+    &__panel
+        @extend .rythm--margin-b-1
+
+        &[data-searchable="false"]
+            display: none
+
+    &__empty-side
+        height: calc(100vh - 78px)
+
+        &__label
+            font-size: 20px
+            color: $gray-85
+
+    &__item
+        &:first-of-type
+            margin-top: 0
+            & >*
+                margin-top: 0
+        &:last-of-type
+            margin-bottom: 0
+            & >*
+                margin-bottom: 0

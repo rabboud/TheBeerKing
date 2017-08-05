@@ -1,0 +1,22 @@
+.Switcher
+    width: 40px
+    height: 16px
+    margin-top: -2px
+    border: none
+    background-color: $gray-secondary
+
+    &-toggle, .switch-toggle
+        width: 12px
+        height: 12px
+        border: none
+        margin: 2px
+        box-shadow: none
+
+    &.on
+        background-color: $green-primary
+
+        .switch-toggle
+            left: 24px
+
+    &[class*="ING"]
+      background: $yellow-primary !important

@@ -1,0 +1,42 @@
+.WidgetCode
+    display: block
+
+    &__desc
+        font-size: 14px
+        font-weight: 500
+        line-height: 1.29
+        color: $gray-primary
+        margin-bottom: 15px
+
+    &__code
+        &__container
+            position: relative
+            padding: 10px 20px 30px 15px
+            border-radius: $main-border-radius
+            border: solid 1px $gray-senary
+            background-color: $yellow-secondary
+            cursor: pointer
+
+        &__alert
+            position: absolute
+            top: 5px
+            left: 0
+            right: 0
+
+            & .StateMessage__text
+                background: $blue-primary !important
+
+        &__info
+            font-size: 11px
+            color: $gray-secondary
+            margin-bottom: 5px
+
+        &__text
+            font-size: 14px
+            line-height: 1.29
+            color: $gray-primary
+            word-wrap: break-word
+
+    &--modifier
+
+    &[data-state="value"]

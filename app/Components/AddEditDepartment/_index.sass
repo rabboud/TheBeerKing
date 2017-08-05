@@ -1,0 +1,109 @@
+.AddEditDepartment
+
+    &__container
+        height: 390px
+        overflow: hidden
+
+        .Animated
+            &__panel
+                &--secondary
+                    z-index: 2
+
+        &__card
+            height: 390px
+
+            .card__content
+                height: 330px
+
+                &__header
+                    &.second
+                        h4
+                            margin-top: 0 !important
+
+                    h4
+                        opacity: 0.5
+                        font-size: 13px
+                        font-weight: bold
+                        color: $black-secondary
+                        margin-top: 10px
+
+
+
+                &__container
+                    height: 170px
+                    position: relative
+                    display: block
+                    padding-top: 5px
+                    overflow-y: scroll
+                    overflow-x: hidden
+                    &.second
+                        min-height: 235px
+                        .depto-line
+                            height: 30px !important
+                            margin: 3px 0px
+                            .columns
+                                margin: 6px auto
+                                &__usercount
+                                    width: 30px
+                                    height: 30px
+                                    border: solid 1px #d7d7d7
+                                    vertical-align: middle
+                                    display: inline-block
+                                    border-radius: 50%
+                                    label
+                                        display: inline-block
+                                        width: 100%
+                                        text-align: center
+                                        margin-top: 8px
+                                        font-weight: 500
+                                        color: $black-secondary
+
+                    .padding_space
+                        padding-left: 10px
+
+                    .no-margin
+                        margin: 0 !important
+
+                    &__label
+                        font-family: Roboto
+                        font-size: 13px
+                        font-weight: normal
+                        font-style: normal
+                        color: $black-secondary
+
+                        &[data-deactive="true"]
+                            color: $gray-secondary
+
+                        &[data-checked="true"]
+                            font-weight: bold
+
+                    .columns
+                        margin: 5px auto
+
+                &__footer
+                    background-color: white
+                    padding-top: 8px
+                    &.second
+                        padding-top: 7px
+
+                    .btn
+                        font-size: 15px
+                        font-weight: 500
+
+    &__preview
+        margin-top: 10px
+        margin-bottom: 25px
+
+    &__modal
+        &__content
+            width: 300px
+            .title
+                &--card
+                    font-size: 16px
+
+            .input-text
+                margin-bottom: 5px
+                height: 45px
+
+            .select
+                margin-bottom: 5px

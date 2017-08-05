@@ -1,0 +1,60 @@
+.InteractionTransfer
+    position: absolute
+    top: 15px
+    left: 75px
+    right: 15px
+    bottom: 15px
+    border-radius: 5px
+    background-color: $gray-85
+    z-index: 9
+
+    &__container
+        @extend .rythm--37, .rythm--center
+        display: block
+        width: 320px
+        border-radius: 5px
+        margin: 0 auto
+
+    &__content
+        @extend .columns, .rythm--margin-t-2
+        height: 100%
+
+    &__search
+        @extend .row
+
+        &__form
+            @extend .columns
+
+    &__list
+        @extend .row
+        list-style: none
+        padding: 0
+
+        &:last-of-type
+            margin-bottom: 60px !important
+
+        &__container
+            @extend .columns
+
+        &__item
+            @extend .row, .rythm--6
+            vertical-align: middle
+            cursor: pointer
+
+            &:hover
+                background-color: $gray-tertiary
+                box-shadow: $gray-tertiary 0px 0px 0px 6px
+
+            &__label
+                @extend .large-7, .columns, .rythm--center
+                font-size: 15px
+                font-weight: 500
+                color: $gray-primary
+
+                label
+                    cursor: pointer
+
+            &__avatar
+                @extend .large-5, .columns, .rythm--center
+                text-align: right
+                cursor: pointer

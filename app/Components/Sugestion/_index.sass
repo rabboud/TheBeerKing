@@ -1,0 +1,36 @@
+.Sugestion
+    width: 100%
+    border-radius: 8px
+    background-color: #ffffff
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2)
+    display: block
+    margin: 10px 0
+    padding: 10px 0px 10px 13px
+    position: absolute
+    z-index: 10
+
+    &.input__select
+        margin: 0
+        padding: 0
+
+    &__backdrop
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: -1
+
+    &[data-direction="up"]
+        bottom: 50px
+
+    &[data-direction="down"]
+        top: 50px
+
+    &[data-show="false"]
+        display: none
+
+    p
+        font-family: Roboto
+        font-size: 12px
+        color: #9b9b9b

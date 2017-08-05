@@ -1,0 +1,42 @@
+.Tooltip
+    position: relative
+    color: $gray-secondary
+    font-size: 12px
+    display: inline-block
+
+    &:hover
+        .Tooltip
+            &__body
+                opacity: 1
+                visibility: visible
+                transform: translateY(5px)
+            &__header
+                box-shadow: 0 1px 5px 0 $gray-50
+                border-radius: $main-border-radius
+                background-color: $white
+                &[data-no-bkg="true"]
+                    background-color: transparent
+                    box-shadow: none
+
+    &__header
+        display: inline-block
+        position: relative
+
+    &__body
+        overflow-y: scroll
+        padding: 12px 7px 13px
+        position: absolute
+        z-index: 9
+        visibility: hidden
+        background-color: $white
+        border-radius: 5px
+        box-shadow: 0 1px 5px 0 $gray-50
+        white-space: nowrap
+        opacity: 0
+        will-change: transform
+        transform: translateY(0)
+        transition: all .3s
+
+    &[data-position="left"]
+        & .Tooltip__body
+            right: 0

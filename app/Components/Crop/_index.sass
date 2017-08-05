@@ -1,0 +1,41 @@
+.Crop
+    @extend .rythm--center
+    display: block
+    margin: 0 auto
+    width: 300px
+    height: 370px
+
+    &__cropper
+        @extend .rythm--margin-b-2
+
+    &__editor-container
+        display: inline-block
+        width: 150px
+        height: 150px
+        overflow: hidden
+        border-radius: 100%
+        margin: 0 20px -65px
+
+        &:hover
+            .Crop__editor-container__change
+                display: block
+
+        &__change
+            display: none
+            position: absolute
+            width: 150px
+            height: 150px
+            margin-top: -153px
+            background: rgba(0, 0, 0, 0.5)
+            border-radius: 100%
+
+    &__zoom
+        display: inline-block
+
+        &__btn
+            background-color: $gray-secondary !important
+            width: 30px !important
+            height: 30px !important
+            font-size: 20px !important
+            font-weight: bold
+            color: $white

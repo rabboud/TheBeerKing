@@ -1,0 +1,42 @@
+.Accordion
+    display: block
+    height: 100%
+
+    &__item
+        height: 50px
+        margin: 5px 0
+        overflow: hidden
+        transition: height .3s ease-in-out
+
+        &__container
+             height: 50px
+             background-color: $gray-tertiary
+             border-radius: $main-border-radius
+             padding: 0 20px
+             cursor: pointer
+
+        &:first-of-type
+            margin-top: 0
+        &:last-of-type
+            margin-bottom: 0
+
+        &[data-active="true"]
+            .Accordion__item
+                &__container
+                    background-color: $blue-primary
+                    border-bottom-left-radius: 0
+                    border-bottom-right-radius: 0
+
+        &__title, &__icon
+            @extend .rythm--center
+            vertical-align: middle
+
+        &__icon
+            float: right
+
+        &__panel
+            padding: 20px
+            overflow-y: scroll
+            background-color: $gray-tertiary
+            border-bottom-left-radius: $main-border-radius
+            border-bottom-right-radius: $main-border-radius

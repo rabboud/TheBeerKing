@@ -1,0 +1,23 @@
+.Notification
+    display: inline-block
+    position: relative
+
+    &__icon
+        position: absolute
+        top: -7px
+        right: -7px
+        width: 16px
+        height: 16px
+        color: $white
+        border-radius: 50%
+        background-color: $gray-secondary
+        text-align: center
+        visibility: hidden
+
+        &__content
+            margin: 0 auto
+            font-size: 15px
+
+    &[data-show="true"]
+        .Notification__icon
+            visibility: visible

@@ -1,0 +1,198 @@
+.Avatar
+    display: inline-block
+    position: relative
+
+    &__name
+        display: inline-block
+        margin-left: 10px
+        font-size: 14px
+        color: $gray-secondary
+
+    .icon
+        display: inline-block
+        vertical-align: middle
+
+    img
+        width: 42px
+        height: 42px
+        border-radius: 100%
+        border: solid 2px $white
+
+    &[data-force-circle="true"]
+        overflow: hidden
+        border-radius: 50%
+
+    &__status
+        display: inline
+        background: $gray-secondary
+        width: 12px
+        height: 12px
+        position: absolute
+        border-radius: 100%
+        border: solid 2px $white
+        margin: -15px 0px 0px -12px
+        bottom: 2px
+        right: 1px
+
+        &[data-status="NOT_REGISTERED"], &--NOT_REGISTERED
+            background: $gray-secondary
+
+        &[data-status="REGISTERING"], &--REGISTERING,
+        &[data-status="UNREGISTERING"], &--UNREGISTERING
+            background: $yellow-primary
+
+        &[data-status="REGISTERED"], &--REGISTERED
+            background: $green-primary
+
+        &[data-status="none"], &--none
+            display: none !important
+
+    &__count
+        display: inline-block
+        width: 30px
+        height: 30px
+        border-radius: 100%
+        border: solid 1px #d7d7d7
+        font-weight: bold
+        color: $black-secondary
+        text-align: center
+        vertical-align: middle
+        font-size: 13px
+        padding-top: 7px
+
+    &__retry
+        position: absolute
+        background: $red-primary
+        border-radius: 100%
+        width: 42px
+        height: 42px
+        margin-left: -42px
+        border: solid 2px $white
+        cursor: pointer
+
+        .icon
+            margin-top: -2px
+
+    &__list
+        list-style: none
+
+        &__item
+            display: inline-block
+
+            .Avatar__status
+                display: none
+
+            &:last-child
+                .Avatar__status
+                    display: inline
+
+    &__graph
+        position: absolute
+        fill: transparent
+        top: -9px
+        right: 0
+        bottom: 0
+        left: -6px
+        z-index: -1
+
+        &__circle
+            stroke-width: 5
+            stroke: $green-primary
+            stroke-dasharray: calc(158 / 3) 158
+            stroke-linecap: round
+            transform-origin: center center
+            transform: rotate(-90deg)
+
+    &[data-graph="true"]
+        padding-left: 3px
+        vertical-align: middle
+        height: 35px
+        display: inline-block
+
+        img
+            border: 3px solid $gray-tertiary
+
+
+    &[data-size="small"], &--small
+        vertical-align: middle
+        height: 30px
+        display: inline-block
+
+        &[data-fixed-width="true"]
+            width: 30px
+
+        img
+            width: 30px
+            height: 30px
+
+        .Avatar__retry
+            width: 30px
+            height: 30px
+            margin-left: -30px
+
+    &[data-size="medium"], &--medium
+        vertical-align: middle
+        height: 40px
+
+        &[data-fixed-width="true"]
+            width: 40px
+
+        img
+            width: 40px
+            height: 40px
+
+        .Avatar__name
+            margin: 0 10px
+
+        .Avatar__retry
+            width: 40px
+            height: 40px
+            margin-left: -40px
+
+    &[data-size="large"], &--big
+        height: 50px
+
+        &[data-fixed-width="true"]
+            width: 50px
+
+        img
+            width: 50px
+            height: 50px
+
+        .Avatar__name
+            margin: 0 10px
+
+        .Avatar__retry
+            width: 50px
+            height: 50px
+            margin-left: -50px
+
+    &[data-size="x-large"], &--big
+        height: 80px
+
+        &[data-fixed-width="true"]
+            width: 80px
+
+        img
+            width: 80px
+            height: 80px
+
+        .Avatar__name
+            margin: 0 10px
+
+        .Avatar__retry
+            width: 80px
+            height: 80px
+            margin-left: -80px
+
+
+    &[data-group="true"], &--group
+        display: table
+        margin-left: -20px
+
+    &[data-clickable="true"]
+        cursor: pointer
+
+    &[data-no-border="true"]
+        img
+            border: none

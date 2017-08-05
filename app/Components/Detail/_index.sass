@@ -1,0 +1,62 @@
+.detail
+
+    .card__header
+            background: transparent
+            height: 58px
+            position: absolute
+            right: 20px
+
+            &__list
+                &__item
+                    margin-left: 10px
+
+    &__group
+        @extend .large-12, .columns
+
+        &__container
+            @extend .large-12, .columns
+            padding: 10px 0
+            display: block
+            border-top: 1px solid $alto-2
+            border-bottom: 1px solid $alto-2
+
+            &--no-bottom
+                border-bottom: none
+
+        .detail__item
+            @extend .columns
+            padding: 0
+
+            &:nth-child(1)
+                @extend .large-6
+
+            &:nth-child(2)
+                @extend .large-2
+
+            &:nth-child(3)
+                @extend .large-4
+
+    &__item
+        @extend .large-12, .columns
+        margin: 10px 0
+
+        &__link
+            color: $cornflower-blue
+            font-size: 16px
+            margin: 0 10px 0 0
+            text-decoration: underline
+
+        &__label
+            color: $gray-secondary
+            display: inline-block
+            font-size: 12px
+            margin: 0 0 4px 0
+            width: 100%
+
+        &__text
+            color: $emperor-2
+            font-size: 16px
+
+        &__time
+            color: $gray-secondary
+            font-size: 12px

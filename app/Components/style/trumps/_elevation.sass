@@ -1,0 +1,11 @@
+$elevationBase: 5px
+
+.elevation
+    box-shadow: 0 0 $elevationBase 0 rgba(0, 0, 0, 0.5)
+    transition: box-shadow 0.3s ease-in-out
+
+    &--jump
+        box-shadow: 0 0 $elevationBase * 2 0 rgba(0, 0, 0, 0.5)
+
+    &--none
+        box-shadow: none

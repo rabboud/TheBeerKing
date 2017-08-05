@@ -1,0 +1,94 @@
+$white: #fff
+$white-50: rgba(255, 255, 255, 0.5)
+$gray-50: rgba(204, 204, 204, 0.5)
+$black: #000
+$black-secondary: #4a4a4a
+$background-primary: #808080
+$background-secondary: #e0e0e0
+$black-30: rgba(20, 13, 13, 0.3)
+$pinkish-grey: #ccc
+$black-85: rgba(0, 0, 0, 0.85)
+$black-70: rgba(0, 0, 0, 0.7)
+$black-10: rgba(0, 0, 0, 0.1)
+$black-50: rgba(0, 0, 0, 0.5)
+$gallery: #eee
+$alto: #DDDDDD
+$alto-2: #D8D8D8
+$emperor: #555555
+$emperor-2: #565151
+$red-primary: #e61e21
+$red-secondary: #d0011b
+$red-ternary: #ba3121
+$gray-primary: #565151
+$gray-secondary: #9b9b9b
+$gray-tertiary: #f6f6f6
+$gray-quaternary: #726f6f
+$gray-quinquennary: #8b8787
+$gray-senary: #d7d7d7
+$gray-septenary: #dedede
+$gray-octonary: #eae9e9
+$gray-nonary: #474545
+$gray-denary: #cdcbcb
+$gray-eleventh: #676262
+$gray-85: rgba(86, 81, 81, .85)
+$cornflower-blue: #4a90e2
+$blue-primary: $cornflower-blue
+$blue-secondary: #2c8cc4
+$blue-tertiary: #ecf3fc
+$blue-quaternary: #1f74b3
+$blue-quinquennary: #4ea2e0
+$orange-primary: #e5730a
+$yellow-primary: #f6a623
+$yellow-secondary: #fffde8
+$yellow-ternary: #f5a623
+$green-primary: #7ed321
+$green-secondary: #5eb02e
+$green-ternary: #00b592
+$tundora: #4a4a4a
+$dove-gray: rgb(102,102,102)
+$dove-gray-25: rgba(102,102,102,0.25)
+$purple-primary: #924caf
+$lima: #7ed321
+
+$main-border-radius: 5px
+
+// React-date colors variables
+$react-dates-color-primary: $blue-primary
+$react-dates-color-primary-shade-1: $blue-tertiary
+$react-dates-color-primary-shade-2: $blue-tertiary
+$react-dates-color-primary-shade-3: $blue-tertiary
+$react-dates-color-primary-shade-4: $blue-tertiary // In day range background
+$react-dates-color-secondary: $black-secondary // In day range text
+$react-dates-color-border-light: $blue-primary // Day Hover
+$react-dates-color-gray-lighter: $gray-secondary // Disabled Day
+$react-dates-color-gray-dark: $black-secondary // Month and Year title
+$react-dates-color-placeholder-text: $black-secondary // Days of week
+$react-dates-color-focus: $blue-primary // Focused DatePicker background
+$react-dates-color-text: $black-secondary // DatePicker text
+@import '~react-dates/css/variables.scss'
+@import '~react-dates/css/styles.scss'
+
+body
+    background: $background-primary !important
+*
+    outline: none
+    font-family: 'Roboto' !important
+
+.main-wrapper
+    background-color: $background-secondary
+    position: fixed
+    margin: 0 auto
+    left: 0
+    right: 0
+    overflow: hidden
+
+    &__child
+        margin-top: 60px
+        padding-top: 15px
+        padding-left: 75px
+        padding-right: 15px
+        height: calc(100vh - 60px)
+        position: relative
+
+        &--without-left-menu
+            padding-left: 15px

@@ -1,0 +1,57 @@
+.StateMessage
+
+    &__icon
+        vertical-align: top
+
+    &__text
+        &__icon
+            display: inline-block
+            margin-right: 5px
+            vertical-align: top
+
+    &--modifier
+
+    &[data-middle="true"]
+        @extend .rythm--center
+
+    &[data-has-action="true"]
+        .StateMessage
+            &__action
+                @extend .text--link
+
+    &[data-color="yellow"]
+        .StateMessage
+            &__text
+                background-color: $yellow-primary
+
+    &[data-type="bubble"]
+        text-align: center
+
+        .StateMessage
+            &__text
+                display: inline-block
+                margin: 0 auto
+                padding: 7px 15px
+                border-radius: 20px
+                background-color: $red-primary
+
+                &__context, &__trying, &__action
+                    margin: 0
+                    display: inline-block
+                    color: $white
+
+                    &:first-of-type
+                        margin-right: 3px
+
+            &__action
+                color: $white
+
+        &[data-color="yellow"]
+            .StateMessage__text
+                background-color: $yellow-primary
+
+    &[data-inline="true"]
+        .StateMessage
+            &__text
+                &__context
+                    display: inline

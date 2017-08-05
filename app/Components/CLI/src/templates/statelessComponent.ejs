@@ -1,0 +1,11 @@
+import React from 'react';
+
+const <%= component.name %> = ({className, <%= component.params %>}) => (
+    <div className={`<%= component.name %> ${className}`}>My brand new Component!</div>
+);
+
+<%= component.name %>.PropTypes = {
+    className: React.PropTypes.string
+};
+
+export default <%= component.name %>;

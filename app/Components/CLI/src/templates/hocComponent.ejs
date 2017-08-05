@@ -1,0 +1,7 @@
+import AltContainer from 'alt-container';
+import React from 'react';
+import {<%= component.stores %>} from 'app/flux/Store';
+import {<%= component.actions %>} from 'app/flux/Actions';
+import Screen from './Screen';
+
+export default (props) => <AltContainer stores={{<%= component.stores %>}} actions={{<%= component.actions %>}} component={Screen} inject={{defaultProps: props}} />;

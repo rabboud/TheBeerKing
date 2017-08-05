@@ -1,0 +1,52 @@
+.Ordering
+    background-color: $gray-tertiary
+    padding: 5px 6px
+    border-radius: $main-border-radius
+    cursor: pointer
+    display: none
+
+    &__icon
+        & .icon__svg
+            position: relative
+            & svg
+                position: absolute
+        &__up
+            margin-bottom: 2px
+
+        &__down
+            margin-top: 2px
+
+    &__block
+
+    &--modifier
+
+    &[data-direction="desc"]
+        padding: 8px 6px
+        background-color: $blue-primary
+        display: block
+
+        .Ordering
+            &__icon
+                &__up
+                    display: none
+                &__down
+                    margin: 0
+                    & path
+                        fill: $white
+                        stroke: $white
+                        opacity: 1
+
+    &[data-direction="asc"]
+        padding: 7px 6px
+        background-color: $blue-primary
+        display: block
+
+        .Ordering
+            &__icon
+                &__up
+                    & path
+                        fill: $white
+                        stroke: $white
+                        opacity: 1
+                &__down
+                    display: none

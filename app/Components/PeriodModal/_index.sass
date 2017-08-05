@@ -1,0 +1,38 @@
+.PeriodModal
+    &__content
+        position: absolute
+        top: 150px
+        right: 35px
+        width: 310px
+        padding: 20px
+        border-radius: $main-border-radius
+        background-color: $white
+
+    &__period
+        margin-bottom: 5px
+        &__title
+            margin-bottom: 5px
+        &__select
+            &__item
+                margin: 0 5px
+                padding: 11px 14px
+                border-radius: 15px
+
+                &:first-of-type
+                    margin-left: 0
+                &:last-of-type
+                    margin-right: 0
+
+                &--selected
+                    padding: 10px 15px
+                    border: solid 1px $gray-senary
+                    & .Text__content
+                        color: $blue-primary
+
+    &__date
+        &__title
+            margin-bottom: 10px
+
+    &__actions
+        &__remove
+            margin-left: 20px

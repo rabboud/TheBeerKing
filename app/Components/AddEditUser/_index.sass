@@ -1,0 +1,71 @@
+.AddEditUser
+
+    &__container
+        height: 390px
+        overflow: hidden
+
+        &__card
+            height: 390px
+
+            .card__content
+                height: 330px
+
+                &[data-scroll="true"]
+                    overflow-y: scroll
+                    overflow-x: hidden
+
+                h4
+                    opacity: 0.5
+                    font-size: 13px
+                    font-weight: 500
+                    color: $black-secondary
+
+                label
+                    font-family: Roboto
+                    font-size: 14px
+                    font-weight: normal
+                    font-style: normal
+
+                .columns
+                    margin: 8px auto
+
+                &__container
+                    height: 210px
+                    position: relative
+                    display: block
+                    padding-top: 7px
+                    overflow-y: scroll
+                    overflow-x: hidden
+
+                &__footer
+                    background-color: $white
+                    padding-top: 20px
+                    .btn
+                        font-size: 15px
+                        font-weight: 500
+
+    &__preview
+        margin-top: 10px
+        margin-bottom: 25px
+
+    &__modal
+        &__content
+            width: 300px
+            .title
+                &--card
+                    font-size: 16px
+
+            .input-text
+                margin-bottom: 5px
+                height: 45px
+                font-size: 14px
+
+            .select
+                margin-bottom: 5px
+                height: 45px
+                border-radius: 5px
+
+            .btn
+                font-size: 15px
+                font-weight: 500
+                margin-top: 5px

@@ -1,0 +1,106 @@
+.MessageListItem
+    @extend .rythm--padding-b-1, .rythm--padding-t-1, .columns
+    cursor: pointer
+    border-radius: 3px
+    margin: 5px 0
+
+    &:hover
+        background: $gray-tertiary
+
+        & .MessageListItem
+            &__footer
+                &__edit
+                    visibility: visible
+
+    &__header
+        font-family: Roboto
+        font-size: 14px
+        color: $gray-primary
+
+        &__type
+            .icon__svg svg
+                vertical-align: -webkit-baseline-middle
+
+        &__title
+            padding-top: 6px
+            padding-bottom: 6px
+
+            &--note
+                padding-top: 10px !important
+
+            &--preview
+                width: 95%
+                height: 10px
+                opacity: 0.12
+                border-radius: 5px
+                background-color: #4a4a4a
+                margin: 5px 15px
+
+        &__time
+            font-family: Roboto
+            font-size: 12px
+            text-align: right
+            color: #9b9b9b
+            padding-top: 9px
+            padding-bottom: 9px
+
+            &--note
+                padding-top: 12px !important
+                padding-bottom: 0 !important
+
+    &[data-bkg-color="gray"]
+        background: $gray-tertiary
+
+    &[data-clickable="false"]
+        cursor: default
+
+    &[data-selected="true"]
+        background: $gray-tertiary
+
+    &__content
+        @extend .rythm--margin-b-1
+        font-family: Roboto
+        font-size: 14px
+        line-height: 1.2
+        color: $gray-85
+        padding-bottom: 10px
+
+        &__item
+            &--note
+                margin-left: 38px !important
+
+            > p
+                white-space: pre-line
+                word-wrap: break-word
+
+            &--preview
+                width: 100%
+                padding: 0
+                margin: 5px 0 0 !important
+
+                p
+                    width: 80%
+                    height: 10px
+                    opacity: 0.12
+                    border-radius: 5px
+                    background-color: #4a4a4a
+                    margin: 10px
+
+    &__clock
+        padding-right: 5px
+
+    &__footer
+
+        &--note
+            margin-left: 36px !important
+
+        &__tags
+            margin-left: -40px
+
+            .Tag
+                display: inline-block
+                margin: 3px 3px
+                text-align: center
+
+        &__edit
+            visibility: hidden

@@ -1,0 +1,42 @@
+.ChartArea
+    display: block
+    height: 100%
+    width: 100%
+
+    & .c3-axis-x, .c3-axis-y
+        & .domain
+            stroke: none
+        & .tick
+            & line
+                stroke: none
+            & text
+                font-size: 11px
+                font-weight: 500
+                letter-spacing: 1.8px
+                fill: $gray-secondary
+
+    & .c3-legend-item
+        text
+            font-size: 14px
+            fill: $black-secondary
+
+    &__tooltip
+        padding: 8px
+        border-radius: 5px
+        background-color: $white
+        box-shadow: 0 2px 4px 0 $dove-gray-25
+
+        &__text
+            font-size: 14px
+            color: $blue-secondary
+
+        &__date
+            padding-top: 5px
+            font-size: 10px
+            color: $black-secondary
+
+    &__block
+
+    &--modifier
+
+    &[data-state="value"]

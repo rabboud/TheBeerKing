@@ -1,0 +1,63 @@
+.ModalFilter
+    &__content
+        position: absolute
+        top: 150px
+        right: 35px
+        width: 310px
+        padding: 20px
+        border-radius: $main-border-radius
+        background-color: $white
+
+    &__data
+        &:not(:last-child)
+            margin-bottom: 25px
+
+        > h4
+            opacity: 0.5
+            font-size: 13px
+            font-weight: 500
+            color: $black-secondary
+            margin-bottom: 10px
+
+        &-wrapper
+            height: 215px
+            width: 280px
+            margin-bottom: 25px
+            padding-right: 7px
+            overflow-y: scroll
+            overflow-x: hidden
+
+    &__options
+        margin-bottom: 10px !important
+
+        &__check *
+            cursor: pointer
+
+        &__text
+            font-size: 13px
+            color: $black-secondary
+            padding-top: 2px
+            padding-left: 0
+
+            > label
+                cursor: pointer
+
+            &.active
+                font-weight: 500
+        &__count
+            font-size: 13px
+            color: $gray-secondary
+            text-align: right
+            padding-top: 2px
+
+    &__footer__remove
+        margin-left: 20px
+
+    &__button
+        width: 150px
+
+    &__block
+
+    &--modifier
+
+    &[data-state="value"]

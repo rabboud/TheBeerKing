@@ -1,0 +1,46 @@
+// Generic
+$row-width: 1280px
+@import '~normalize.css/normalize.css'
+@import '~foundation/scss/foundation/components/global'
+@import '~foundation/scss/foundation/components/grid'
+
+.full
+    &--screen
+        position: fixed
+        display: block
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        z-index: 999999
+        background: $background-secondary
+
+    &--height
+        height: 100%
+
+    &--width
+        width: 100%
+
+.pull
+    &--left
+        float: left
+    &--right
+        float: right
+.mnone
+    margin: 0px !important
+.alpha
+    margin-left: 15px
+.alpha-10
+    margin-left: 10px
+.zeta
+    margin-right: 10px
+.mb-10
+    margin-bottom: 10px !important
+.mtb-10
+    margin: 10px 0px !important
+.gama
+    margin-right: 10px
+.pr10
+    padding-right: 10px !important
+.content-padded
+    padding: 20px
