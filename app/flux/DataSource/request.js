@@ -1,4 +1,5 @@
 import Http from 'superagent';
+import {ENV} from 'app/services';
 
 /*
     Input params must be like:
@@ -17,7 +18,7 @@ class Request {
                 .set(params.set || {})
                 .query(params.query || {})
                 .send(params.send || {})
-                .timeout(20)
+                .timeout(ENV.REQUEST_TIMEOUT)
                 .on('error', (error) => {
                     reject(error);
                 })
