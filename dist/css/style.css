@@ -53,6 +53,9 @@ body {
 .p-l-half {
   padding-left: 7.5px;
 }
+.m-t-20 {
+  margin-top: 20px;
+}
 .show {
   visibility: visible;
   opacity: 1;
@@ -142,6 +145,20 @@ button {
   padding-bottom: 15px;
   margin-bottom: 10px;
 }
+.detail__description {
+  margin-bottom: 20px;
+}
+.detail__guests h5 {
+  margin-bottom: 10px;
+}
+.detail__owner {
+  text-align: center;
+}
+.detail__owner__photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
 .lobby__mesas {
   padding: 0 !important;
 }
@@ -173,11 +190,6 @@ button {
 .lobby__users .avatar {
   width: 45px;
   height: 45px;
-  border-radius: 50%;
-}
-.detail__owner {
-  width: 90px;
-  height: 90px;
   border-radius: 50%;
 }
 .avatar {
