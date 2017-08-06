@@ -26,8 +26,9 @@
 	padding 0 !important
 
 	> li
-		border 1px solid #aaa
+		box-shadow 0 0 20px 0 rgba(0, 0, 0, 0.15)
 		margin-top 15px
+		color $text
 		padding 15px 10px
 		display block
 		transition background-color 0.4s
@@ -35,22 +36,32 @@
 		&:active
 			background-color rgba(0, 0, 0, 0.10)
 
+.lobby__mesa__descricao
+	h1
+		color $text
+
+	p
+		margin-top 20px
+
 .lobby__users
 	display flex
 	padding 0
 	flex-wrap wrap
 
 	> li
-		margin-right 20px
-		width 160px
+		margin-right 35px
+		width 140px
+		margin-bottom 15px
 
 	.name
 		font-weight 600
 		display inline-block
-		bottom 15px
+		top 11px
+		float left
 		position relative
 
 	.avatar
 		width 45px
 		height 45px
 		border-radius 50%
+		float right

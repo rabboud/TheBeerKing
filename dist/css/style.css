@@ -13,6 +13,12 @@ body {
   padding-left: 0;
   padding-right: 0;
 }
+.not-list:after,
+.not-list:before {
+  content: '';
+  display: table;
+  clear: both;
+}
 .row {
   margin-right: -15px;
   margin-left: -15px;
@@ -185,7 +191,7 @@ button {
 }
 .btn--purple {
   color: #fff;
-  background-color: #5345ff;
+  background-color: #4b1ca2;
 }
 .btn--gray {
   color: #232323;
@@ -205,8 +211,17 @@ button {
   height: 90px;
   border-radius: 50%;
 }
+.detail {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.detail__guests {
+  padding: 15px 10px;
+  margin: 0 15px;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+}
 .lobby__header {
-  background-color: #5345ff;
+  background-color: #4b1ca2;
   padding: 25px 15%;
   margin-bottom: 15px;
 }
@@ -233,8 +248,9 @@ button {
   padding: 0 !important;
 }
 .lobby__mesas > li {
-  border: 1px solid #aaa;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
   margin-top: 15px;
+  color: #232323;
   padding: 15px 10px;
   display: block;
   transition: background-color 0.4s;
@@ -242,25 +258,34 @@ button {
 .lobby__mesas > li:active {
   background-color: rgba(0,0,0,0.1);
 }
+.lobby__mesa__descricao h1 {
+  color: #232323;
+}
+.lobby__mesa__descricao p {
+  margin-top: 20px;
+}
 .lobby__users {
   display: flex;
   padding: 0;
   flex-wrap: wrap;
 }
 .lobby__users > li {
-  margin-right: 20px;
-  width: 160px;
+  margin-right: 35px;
+  width: 140px;
+  margin-bottom: 15px;
 }
 .lobby__users .name {
   font-weight: 600;
   display: inline-block;
-  bottom: 15px;
+  top: 11px;
+  float: left;
   position: relative;
 }
 .lobby__users .avatar {
   width: 45px;
   height: 45px;
   border-radius: 50%;
+  float: right;
 }
 .avatar {
   width: 100px;
