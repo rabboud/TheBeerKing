@@ -10,65 +10,65 @@
 	<section class="appContainer">
 		<section class="lobby__create show">
 			<div class="lobby__container">
+				<div class="lobby__header">
+					<img class="lobby__logo" src="img/logo.png">
+					<h1 class="lobby__title"><span>Criar</span> Mesa</h1>
+				</div>
+
 				<form>
 					<div class="row">
 						<div class="full">
-							<label for="nome" data-full="true">Mesa:</label>
-							<input class="full" id="nome" type="text">
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="full">
-							<label for="assunto" data-full="true">Assunto:</label>
+							<label class="input__label" for="assunto" data-full="true">Assunto</label>
 							<input class="full" id="assunto" type="text">
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="full">
-							<label>Mesa aberta:</label>
+							<label>Mesa aberta</label>
 							<fieldset>
-								<div class="radio-option half">
-									<input id="mesa-true" name="mesa" value="true" type="radio">
-									<label for="mesa-true">Sim</label>
-								</div>
-								<div class="radio-option half">
-									<input id="mesa-false" name="mesa" value="false" type="radio">
-									<label for="mesa-false">Não</label>
+								<div class="row">
+									<div class="radio-option quarter">
+										<input id="mesa-true" name="mesa" value="true" type="radio">
+										<label for="mesa-true">Sim</label>
+									</div>
+									<div class="radio-option quarter">
+										<input id="mesa-false" name="mesa" value="false" type="radio">
+										<label for="mesa-false">Não</label>
+									</div>
 								</div>
 							</fieldset>
 						</div>
 					</div>
 
 					<div class="row">
-						<div class="full">
-							<label for="data">Data:</label>
+						<div class="half">
+							<label class="input__label" for="data">Data</label>
 							<input class="full" id="data" type="text">
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="full">
-							<label for="local">Onde:</label>
+							<label class="input__label" for="local">Onde</label>
 							<input class="full" id="local" type="text">
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="full">
-							<label for="descricao" data-full="true">Descrição:</label>
+							<label for="descricao" data-full="true">Descrição</label>
 							<textarea class="full" id="descricao" rows="2"></textarea>
 						</div>
 					</div>
 				</form>
 
 				<div class="row">
-					<div class="half">
-						<button id="saveTable" class="full">Salvar</button>
+					<div class="three-quarters octave--offset">
+						<button class="btn btn--purple full" id="saveTable" class="full">Salvar</button>
 					</div>
-					<div class="half">
-						<button id="cancelTable" class="full">Cancelar</button>
+					<div class="half quarter--offset">
+						<button class="btn btn--gray full" id="cancelTable" class="full">Cancelar</button>
 					</div>
 				</div>
 			</div>
@@ -211,10 +211,10 @@
 
 				<div class="detail__footer full">
 					<div class="row m-t-20">
-						<div class="half">
+						<div class="full">
 							<button class="full" id="enterTable">Entrar na Mesa</button>
 						</div>
-						<div class="half">
+						<div class="full">
 							<button class="full" id="voltar">Voltar</button>
 						</div>
 					</div>

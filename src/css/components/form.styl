@@ -1,6 +1,9 @@
 input
 	&[type="text"]
-		height 35px
+		height 25px
+		border-color transparent
+		border-bottom 1px solid $text
+		padding-left 85px
 
 textarea
 	height 60px
@@ -9,17 +12,48 @@ textarea
 	overflow-y scroll
 
 fieldset
-	padding 15px 15px 10px
+	padding-bottom 5px
+	padding-top 3px
+	padding-left 0
+	padding-right 0
 	height 60px
+	border-color transparent
 
 	.radio-option
 		margin-top 5px
 
-textarea, input, fieldset
-	border 1px solid #ccc
+textarea, input
+	border 1px solid $text
 	margin-bottom 10px
+	font-size 16px
+
+	&:focus
+		outline none
+
+label
+	font-size 20px
+
+	&.input__label
+		display block
+		margin-bottom -45px
+		position relative
 
 button
 	padding-top 15px
 	padding-bottom 15px
 	margin-bottom 10px
+
+.btn
+	border-radius 50px
+	font-weight 100
+	font-size 1.2rem
+	border-color transparent
+	text-transform uppercase
+
+	&--purple
+		color white
+		background-color $purple
+
+	&--gray
+		color $text
+		background-color $gray

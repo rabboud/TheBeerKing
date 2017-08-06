@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Muli");
+@import url("https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i");
 * {
   font-family: 'Muli', Arial;
   box-sizing: border-box;
@@ -46,6 +46,18 @@ body {
   float: left;
   padding-right: 15px;
   padding-left: 15px;
+}
+.half--offset {
+  margin-left: 50%;
+}
+.third--offset {
+  margin-left: 33.3333%;
+}
+.quarter--offset {
+  margin-left: 25%;
+}
+.octave--offset {
+  margin-left: 12.5%;
 }
 .p-r-half {
   padding-right: 7.5px;
@@ -119,7 +131,10 @@ body {
   transition: transform 0.4s, opacity 0.2s;
 }
 input[type="text"] {
-  height: 35px;
+  height: 25px;
+  border-color: transparent;
+  border-bottom: 1px solid #232323;
+  padding-left: 85px;
 }
 textarea {
   height: 60px;
@@ -128,22 +143,53 @@ textarea {
   overflow-y: scroll;
 }
 fieldset {
-  padding: 15px 15px 10px;
+  padding-bottom: 5px;
+  padding-top: 3px;
+  padding-left: 0;
+  padding-right: 0;
   height: 60px;
+  border-color: transparent;
 }
 fieldset .radio-option {
   margin-top: 5px;
 }
 textarea,
-input,
-fieldset {
-  border: 1px solid #ccc;
+input {
+  border: 1px solid #232323;
   margin-bottom: 10px;
+  font-size: 16px;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+label {
+  font-size: 20px;
+}
+label.input__label {
+  display: block;
+  margin-bottom: -45px;
+  position: relative;
 }
 button {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 10px;
+}
+.btn {
+  border-radius: 50px;
+  font-weight: 100;
+  font-size: 1.2rem;
+  border-color: transparent;
+  text-transform: uppercase;
+}
+.btn--purple {
+  color: #fff;
+  background-color: #5345ff;
+}
+.btn--gray {
+  color: #232323;
+  background-color: #a0a09f;
 }
 .detail__description {
   margin-bottom: 20px;
@@ -158,6 +204,30 @@ button {
   width: 90px;
   height: 90px;
   border-radius: 50%;
+}
+.lobby__header {
+  background-color: #5345ff;
+  padding: 25px 15%;
+  margin-bottom: 15px;
+}
+.lobby__logo {
+  width: 30%;
+  display: inline-block;
+}
+.lobby__title {
+  width: 60%;
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 800;
+  margin-left: 30px;
+  color: #fff;
+  line-height: 1;
+  vertical-align: super;
+  text-transform: uppercase;
+}
+.lobby__title span {
+  font-weight: 100;
+  font-size: 32px;
 }
 .lobby__mesas {
   padding: 0 !important;
