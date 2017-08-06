@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<title>Rei da Mesa</title>
+  </head>
+
+  <body class="full">
+	<section class="appContainer">
+		<section class="lobby__create show">
+			<div class="lobby__container">
+				<form>
+					<div class="row">
+						<div class="full">
+							<label for="nome" data-full="true">Mesa:</label>
+							<input class="full" id="nome" type="text">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="full">
+							<label for="assunto" data-full="true">Assunto:</label>
+							<input class="full" id="assunto" type="text">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="full">
+							<label>Mesa aberta:</label>
+							<fieldset>
+								<div class="radio-option half">
+									<input id="mesa-true" name="mesa" value="true" type="radio">
+									<label for="mesa-true">Sim</label>
+								</div>
+								<div class="radio-option half">
+									<input id="mesa-false" name="mesa" value="false" type="radio">
+									<label for="mesa-false">Não</label>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="full">
+							<label for="data">Data:</label>
+							<input class="full" id="data" type="text">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="full">
+							<label for="local">Onde:</label>
+							<input class="full" id="local" type="text">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="full">
+							<label for="descricao" data-full="true">Descrição:</label>
+							<textarea class="full" id="descricao" rows="2"></textarea>
+						</div>
+					</div>
+				</form>
+
+				<div class="row">
+					<div class="half">
+						<button id="saveTable" class="full">Salvar</button>
+					</div>
+					<div class="half">
+						<button id="cancelTable" class="full">Cancelar</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="lobby__enter hidden">
+			<div class="row">
+				<div class="full">
+					<ul class="lobby__mesas">
+						<li class="not-list full">
+							<div class="lobby__mesa__descricao three-quarters">
+								<h2>
+									Filmes
+								</h2>
+								<h3>
+									Bar 99
+								</h3>
+								<h4>
+									Hoje, às 20h
+								</h4>
+								<p>
+									Bora sentar pra falar dos filmes atuais no cinema
+								</p>
+							</div>
+							<div class="lobby__mesa__photo quarter">
+								<div class="avatar">
+									<img class="avatar__photo" src="http://www.g17.com.br/imagens/noticias/2013/abril/faustao.jpg">
+								</div>
+								<h1>Faustão</h1>
+							</div>
+						</li>
+						<li class="not-list full">
+							<div class="lobby__mesa__descricao three-quarters">
+								<h2>
+									Futebol
+								</h2>
+								<h3>
+									Bar da Graça
+								</h3>
+								<h4>
+									Domingo, às 16h
+								</h4>
+								<p>
+									Quem topa assistir o jogo do Santos e tomar uma gelada? Melhor ainda se rolar aquele pagode depois, pra comemorar!
+								</p>
+							</div>
+							<div class="lobby__mesa__photo quarter">
+								<div class="avatar">
+									<img class="avatar__photo" src="http://piauihoje.com/media/image_bank/2017/4/neymar.jpg">
+								</div>
+								<h1>Neymar Junior</h1>
+							</div>
+						</li>
+						<li class="not-list full">
+							<div class="lobby__mesa__descricao three-quarters">
+								<h2>
+									Política e aquecimento global
+								</h2>
+								<h3>
+									Fenda do Biquini
+								</h3>
+								<h4>
+									Terça às 22h
+								</h4>
+								<p>
+									Não dá mais. Eu e o Bob Esponja, convidamos quem quiser debater sobre a política de uso dos mares. Volta Sandy <3.
+								</p>
+							</div>
+							<div class="lobby__mesa__photo quarter">
+								<div class="avatar">
+									<img class="avatar__photo" src="https://vignette2.wikia.nocookie.net/spongebob/images/2/2f/Patrick_Star_2.png">
+								</div>
+								<h1>Patrick</h1>
+							</div>
+						</li>
+						<li class="not-list full">
+							<div class="lobby__mesa__descricao three-quarters">
+								<h2>
+									Iluminatis
+								</h2>
+								<h3>
+									Bar 99
+								</h3>
+								<h4>
+									Quarta, às 12h
+								</h4>
+								<p>
+									Um almoço para discutirmos essas páginas que decidiram falar tudo sobre a nova ordem mundial.
+								</p>
+							</div>
+							<div class="lobby__mesa__photo quarter">
+								<div class="avatar">
+									<img class="avatar__photo" src="http://static4.businessinsider.com/image/55244c016bb3f7d319fc827d/why-google-ceo-larry-page-personally-reviews-every-candidate-the-company-hires.jpg">
+								</div>
+								<h1>Larry Page</h1>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="lobby__detail hidden">
+			<div class="row">
+				<div class="detail__description three-quarters">
+					<h2>Futebol</h2>
+					<h3>Bar da Graça</h3>
+					<h4>Domingo, às 16h</h4>
+					<p>Quem topa assistir o jogo do Santos e tomar uma gelada? Melhor ainda se rolar aquele pagode depois, pra comemorar!</p>
+				</div>
+				<div class="quarter">
+					<img class="detail__owner" src="http://piauihoje.com/media/image_bank/2017/4/neymar.jpg">
+					<h1>Neymar Junior</h1>
+				</div>
+				<div class="full">
+					<h5>Convidados confirmados</h5>
+					<ul class="lobby__users">
+						<li class="not-list">
+							<p class="name">Adriano</p>
+							<img class="avatar" src="https://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg">
+						</li>
+						<li class="not-list">
+							<p class="name">Ronaldo</p>
+							<img class="avatar" src="https://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg">
+						</li>
+						<li class="not-list">
+							<p class="name">Messi</p>
+							<img class="avatar" src="https://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg">
+						</li>
+						<li class="not-list">
+							<p class="name">Drogba</p>
+							<img class="avatar" src="https://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg">
+						</li>
+						<li class="not-list">
+							<p class="name">Daniel Alves</p>
+							<img class="avatar" src="https://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg">
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>

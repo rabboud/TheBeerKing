@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+* {
+  font-family: 'Muli', Arial;
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  width: 100%;
+}
+.not-list {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.row:after,
+.row:before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.full {
+  width: 100%;
+}
+.half {
+  width: 50%;
+}
+.third {
+  width: 33.3333%;
+}
+.quarter {
+  width: 25%;
+}
+.three-quarters {
+  width: 75%;
+}
+.full,
+.half,
+.third,
+.quarter,
+.three-quarters {
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.p-r-half {
+  padding-right: 7.5px;
+}
+.p-l-half {
+  padding-left: 7.5px;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+.appContainer {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+}
+.lobby__create {
+  position: absolute;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.lobby__create.hidden {
+  transform: translateX(1000px);
+  display: none;
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.2s;
+}
+.lobby__enter {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1000px);
+}
+.lobby__enter.show {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: transform 0.4s, opacity 0.2s;
+}
+.lobby__enter.hidden {
+  transform: translateY(50%);
+  display: none;
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.2s;
+}
+.lobby__detail {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1000px);
+}
+.lobby__detail.show {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: transform 0.4s, opacity 0.2s;
+}
+.lobby__detail.hidden {
+  transform: translateX(-50%);
+  display: none;
+  opacity: 0;
+  transition: transform 0.4s, opacity 0.2s;
+}
+input[type="text"] {
+  height: 35px;
+}
+textarea {
+  height: 60px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  overflow-y: scroll;
+}
+fieldset {
+  padding: 15px 15px 10px;
+  height: 60px;
+}
+fieldset .radio-option {
+  margin-top: 5px;
+}
+textarea,
+input,
+fieldset {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+.lobby__mesas {
+  padding: 0 !important;
+}
+.lobby__mesas > li {
+  border: 1px solid #aaa;
+  margin-top: 15px;
+  padding: 15px 10px;
+  display: block;
+  transition: background-color 0.4s;
+}
+.lobby__mesas > li:active {
+  background-color: rgba(0,0,0,0.1);
+}
+.lobby__users {
+  display: flex;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.lobby__users > li {
+  margin-right: 20px;
+  width: 160px;
+}
+.lobby__users .name {
+  font-weight: 600;
+  display: inline-block;
+  bottom: 15px;
+  position: relative;
+}
+.lobby__users .avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.detail__owner {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar__photo {
+  width: 100px;
+  height: 100px;
+}

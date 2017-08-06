@@ -1,0 +1,37 @@
+.lobby__mesas
+	padding 0 !important
+
+	> li
+		border 1px solid #aaa
+		margin-top 15px
+		padding 15px 10px
+		display block
+		transition background-color 0.4s
+
+		&:active
+			background-color rgba(0, 0, 0, 0.10)
+
+.lobby__users
+	display flex
+	padding 0
+	flex-wrap wrap
+
+	> li
+		margin-right 20px
+		width 160px
+
+	.name
+		font-weight 600
+		display inline-block
+		bottom 15px
+		position relative
+
+	.avatar
+		width 45px
+		height 45px
+		border-radius 50%
+
+.detail__owner
+	width 90px
+	height 90px
+	border-radius 50%

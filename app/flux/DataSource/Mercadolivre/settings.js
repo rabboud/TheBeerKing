@@ -1,8 +1,0 @@
-import {ENV} from 'app/services';
-
-export default {
-    URI: ENV.BODYLIFT + '/mercadolivre',
-    MERCADOLIVRE: ENV.MERCADOLIVRE,
-    MERCADOLIVREAPPID: ENV.MERCADOLIVREAPPID,
-    AUTHMERCADOLIVRE: ENV.AUTHMERCADOLIVRE
-};
